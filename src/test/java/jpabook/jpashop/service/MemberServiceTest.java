@@ -1,6 +1,7 @@
 package jpabook.jpashop.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.respository.MemberRepository;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ class MemberServiceTest {
     MemberService memberService;
     @Autowired
     MemberRepository memberRepository;
-    @Autowired
+    @PersistenceContext
     EntityManager em;
 
     @Test
